@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 
 class App extends Component {
 	render() {
 		return (
 			<React.Fragment>
 				<div className="header">The Github Cards App</div>
-				<Card />
+				<CardList />
 			</React.Fragment>
 		);
 	}

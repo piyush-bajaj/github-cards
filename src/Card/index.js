@@ -4,10 +4,10 @@ class Card extends Component {
 	render() {
 		return (
 			<div className="github-profile">
-				<img src="https://placehold.it/75" alt="profile" />
+				<img src={ this.props.avatar_url } alt="profile" />
 				<div className="info">
-					<div className="name">Name here...</div>
-					<div className="company">Company here...</div>
+					<div className="name">{ this.props.login }</div>
+					<div className="company">{ this.props.organizations_url }</div>
 				</div>
 			</div >
 		);
