@@ -69,13 +69,20 @@ const testData = [
 class App extends Component {
 
 	state = {
-		profiles: testData
+		profiles: []
 	}
+
+	addNewProfile = ( profileData ) => {
+		this.setState( previousState => ( {
+			profiles: [...previousState, profileData]
+		} ) );
+	}
+
 	render() {
 		return (
 			<React.Fragment>
 				<div className="header">The Github Cards App</div>
-				<Form />
+				<Form onSubmit={ this.addNewProfile } />
 				<CardList profiles={ this.state.profiles } />
 			</React.Fragment>
 		);
